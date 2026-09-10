@@ -1,0 +1,22 @@
+# speedtest-cdn — Docker Compose
+#
+# 用法:
+#   cd docker
+#   docker compose up --build              # 完整流程
+#   docker compose run --rm speedtest-cdn --quick    # 快速模式
+#   docker compose run --rm speedtest-cdn --check-only
+#
+# 结果持久化: ../data  ../reports
+
+services:
+  speedtest-cdn:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: speedtest-cdn:latest
+    container_name: speedtest-cdn
+    volumes:
+      - ../data:/app/data
+      - ../reports:/app/reports
+    # 完整流程(默认)。快速模式: command: ["--quick"]
+    command: []
