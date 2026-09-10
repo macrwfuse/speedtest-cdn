@@ -1,0 +1,20 @@
+{
+  "name": "speedtest-cdn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CDN 测速节点全流程维护: 互联网发现 → 健康检测与自动更新 → 测速验证",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node scripts/pipeline.mjs",
+    "pipeline": "node scripts/pipeline.mjs",
+    "quick": "node scripts/pipeline.mjs --quick",
+    "check": "node scripts/update-cdn-nodes.mjs --check-only",
+    "discover": "node scripts/cdn-discovery.mjs",
+    "update": "node scripts/update-cdn-nodes.mjs",
+    "verify": "node scripts/verify-nodes.mjs"
+  },
+  "dependencies": {}
+}
