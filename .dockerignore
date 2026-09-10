@@ -1,0 +1,10 @@
+node-runtime/
+node-runtime-tmp/
+node_modules/
+data/*
+reports/*
+logs/
+*.log
+.git/
+.gitignore
+.run/
