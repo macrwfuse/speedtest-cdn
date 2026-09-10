@@ -1,0 +1,14 @@
+# 便携 Node 运行时（由 install 脚本下载）
+node-runtime/
+node-runtime-tmp/
+
+# 运行时数据
+data/
+reports/
+logs/
+
+# 依赖与临时文件
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
